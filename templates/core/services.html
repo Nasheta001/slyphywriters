@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Our Services — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <span class="s-label">What We Offer</span>
+    <h1>Our <span style="color:var(--dodger)">Services</span></h1>
+    <p>End-to-end content solutions built for iGaming, Fintech, and Crypto industries.</p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="cards-grid">
+      <div class="card reveal"><div class="card-icon">📝</div><div class="card-title">SEO Content Writing</div><p class="card-desc">Algorithm-proof articles, landing pages, and long-form content that rank, convert, and engage. We stay ahead of Google's constant updates so you don't have to.</p><a href="{% url 'service_seo_content' %}" class="card-link">Learn More →</a></div>
+      <div class="card reveal"><div class="card-icon">🔍</div><div class="card-title">SEO Services</div><p class="card-desc">Full-spectrum SEO — from in-depth keyword research and competitor analysis to technical audits, on-page optimisation, and measurable ranking improvements.</p><a href="{% url 'service_seo_services' %}" class="card-link">Learn More →</a></div>
+      <div class="card reveal"><div class="card-icon">🌐</div><div class="card-title">Translation</div><p class="card-desc">Native and bilingual translators across 15+ languages. We preserve your brand voice and message integrity no matter the language or platform.</p><a href="{% url 'service_translation' %}" class="card-link">Learn More →</a></div>
+      <div class="card reveal"><div class="card-icon">✏️</div><div class="card-title">Editing</div><p class="card-desc">Professional proofreading and editing that catches every error and elevates your copy. Consistent tone, flawless grammar, and polished presentation.</p><a href="{% url 'service_editing' %}" class="card-link">Learn More →</a></div>
+      <div class="card reveal"><div class="card-icon">🔗</div><div class="card-title">Link Building</div><p class="card-desc">High-authority backlinks that strengthen your domain and drive real organic traffic. We build links that work across multiple angles — SEO and readership alike.</p><a href="{% url 'service_link_building' %}" class="card-link">Learn More →</a></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Not Sure Which Service You Need?</h2>
+      <p>Tell us your goals and we'll recommend the perfect solution for your brand.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Get a Free Consultation →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

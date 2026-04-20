@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}iGaming Content — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="breadcrumb-sep">›</span>Industry<span class="breadcrumb-sep">›</span>iGaming</div>
+    <h1>iGaming <span style="color:var(--dodger)">Content</span></h1>
+    <p>Specialised content for casinos, sports betting, poker platforms, and regulated online gaming operators.</p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+      <div class="reveal">
+        <span class="s-label">Industry Expertise</span>
+        <h2 class="s-title">Content Built for <span class="ac">iGaming</span></h2>
+        <p class="s-desc" style="margin-bottom:1.25rem;">The iGaming industry demands content that is accurate, compliant with local regulations, engaging to players, and optimised for competitive search terms. Generic content agencies simply don't have the depth of knowledge this niche requires.</p>
+        <p class="s-desc" style="margin-bottom:1.25rem;">SlyphyWriters' iGaming specialists have years of hands-on experience writing casino reviews, slot guides, responsible gambling content, sports betting previews, and operator landing pages across multiple regulated markets.</p>
+        <a href="{% url 'quote' %}" class="btn-primary" style="margin-top:2rem;display:inline-flex;">Get iGaming Content →</a>
+      </div>
+      <div class="reveal">
+        <div class="cover-box">
+          <span class="big-ico">🎰</span>
+          <h3>We Cover</h3>
+          <div class="cover-row"><span class="cr-dot">▸</span>Online Casino Reviews &amp; Comparisons</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Slot &amp; Table Game Guides</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Sports Betting Content &amp; Previews</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Responsible Gambling Articles</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Affiliate SEO Content</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Operator Landing Pages</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Regulatory Compliance Content</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Multilingual iGaming Translation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Dominate iGaming Search Results</h2>
+      <p>Partner with specialists who know your industry inside out.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Start Today →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

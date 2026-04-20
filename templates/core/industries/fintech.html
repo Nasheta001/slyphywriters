@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Fintech Content — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="breadcrumb-sep">›</span>Industry<span class="breadcrumb-sep">›</span>Fintech</div>
+    <h1>Fintech <span style="color:var(--dodger)">Content</span></h1>
+    <p>Clear, trustworthy, and authoritative content for neobanks, payment platforms, and investment solutions.</p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+      <div class="reveal">
+        <span class="s-label">Industry Expertise</span>
+        <h2 class="s-title">Making Finance <span class="ac">Accessible</span></h2>
+        <p class="s-desc" style="margin-bottom:1.25rem;">Fintech content needs to do two things simultaneously: establish authority and simplify complexity. Whether you're explaining open banking, BNPL schemes, robo-advisors, or digital wallets — your audience needs to trust you and understand you.</p>
+        <p class="s-desc" style="margin-bottom:1.25rem;">SlyphyWriters bridges that gap. Our Fintech writers have backgrounds in financial services, economics, and digital innovation — giving your content the credibility it needs to compete.</p>
+        <a href="{% url 'quote' %}" class="btn-primary" style="margin-top:2rem;display:inline-flex;">Get Fintech Content →</a>
+      </div>
+      <div class="reveal">
+        <div class="cover-box">
+          <span class="big-ico">💳</span>
+          <h3>We Cover</h3>
+          <div class="cover-row"><span class="cr-dot">▸</span>Neobank &amp; Digital Wallet Content</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Payment Solution Explainers</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Investment &amp; Robo-Advisor Guides</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Regulatory &amp; Compliance Articles</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Thought Leadership &amp; Whitepapers</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>SEO Blog Posts &amp; News Articles</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Landing Pages &amp; Product Copy</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Multilingual Fintech Translation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Dominate Fintech Search Results</h2>
+      <p>Partner with specialists who know your industry inside out.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Start Today →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

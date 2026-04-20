@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Our Process — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <span class="s-label">How We Work</span>
+    <h1>Our <span style="color:var(--dodger)">Process</span></h1>
+    <p>A step-by-step approach designed to maximise efficiency while ensuring quality remains our top priority.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container" style="max-width:860px;">
+    <div class="reveal" style="text-align:center;margin-bottom:4rem;">
+      <p class="s-desc" style="margin:0 auto;font-size:1.1rem;">At SlyphyWriters, we've perfected the process of creating content. Our workflow has been refined to respect every deadline and adapt to all your requirements — without ever sacrificing your brand's voice.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <h3>Reviewing Your Order</h3>
+          <p>The first step is understanding exactly what you need. Tell us whether you need SEO content writing, translation, editing, link building, or something specific. We'll agree on a deadline, discuss your brand guidelines, and once you provide all the details, we'll get to work immediately.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <h3>Matching You With Experts</h3>
+          <p>Once we've fully analysed your request, we match you with specialists who have direct experience in your industry — whether that's iGaming, Fintech, or Crypto. World-class writers, editors, and SEO specialists begin work on your content right away.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <h3>Collaboration & Feedback</h3>
+          <p>While we're working on your content, we keep you informed of progress. We welcome feedback at any stage and adapt to your requests. You have full visibility over the content at all times — making this a genuine partnership, not just a transaction.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <h3>Final Quality Checks</h3>
+          <p>Before delivery, every piece of content goes through multiple quality checks. We verify factual accuracy, confirm uniqueness, check for grammar and spelling, and ensure the tone of voice is perfectly aligned with your brand — then we hand it over to you for a final review.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-glass">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <span class="s-label">Our Guarantee</span>
+      <h2 class="s-title">Why Our Process <span class="ac">Works</span></h2>
+    </div>
+    <div class="cards-grid">
+      <div class="card reveal" style="text-align:center;"><div class="card-icon" style="margin:0 auto 1.5rem;">🎯</div><div class="card-title">Always On Target</div><p class="card-desc">Every piece is crafted with your goals in mind — more traffic, better rankings, stronger brand authority.</p></div>
+      <div class="card reveal" style="text-align:center;"><div class="card-icon" style="margin:0 auto 1.5rem;">🔒</div><div class="card-title">100% Original</div><p class="card-desc">All content is unique, plagiarism-checked, and written specifically for your brand. No templates, no recycled ideas.</p></div>
+      <div class="card reveal" style="text-align:center;"><div class="card-icon" style="margin:0 auto 1.5rem;">📅</div><div class="card-title">Deadline Guaranteed</div><p class="card-desc">We take deadlines seriously. When we agree to a delivery date, we honour it — no exceptions, no excuses.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Start Your Project Today</h2>
+      <p>Share your requirements and we'll match you with the perfect content specialist.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Get a Free Quote →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Crypto Content — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="breadcrumb-sep">›</span>Industry<span class="breadcrumb-sep">›</span>Crypto</div>
+    <h1>Crypto <span style="color:var(--dodger)">Content</span></h1>
+    <p>Authoritative, up-to-date content for crypto exchanges, DeFi platforms, and blockchain projects.</p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+      <div class="reveal">
+        <span class="s-label">Industry Expertise</span>
+        <h2 class="s-title">Navigate Crypto with <span class="ac">Confidence</span></h2>
+        <p class="s-desc" style="margin-bottom:1.25rem;">The crypto content landscape moves fast, and staying relevant means having writers who understand the technology, the culture, and the audience. From Bitcoin basics to DeFi deep-dives, our crypto writers bring both technical knowledge and narrative clarity.</p>
+        <p class="s-desc" style="margin-bottom:1.25rem;">We produce content that resonates with experienced traders and newcomers alike — helping your project cut through the noise and build genuine authority in one of the most competitive digital spaces.</p>
+        <a href="{% url 'quote' %}" class="btn-primary" style="margin-top:2rem;display:inline-flex;">Get Crypto Content →</a>
+      </div>
+      <div class="reveal">
+        <div class="cover-box">
+          <span class="big-ico">₿</span>
+          <h3>We Cover</h3>
+          <div class="cover-row"><span class="cr-dot">▸</span>Exchange &amp; Trading Platform Content</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>DeFi &amp; Web3 Explainers</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Blockchain Project Whitepapers</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>NFT &amp; Metaverse Content</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Crypto News &amp; Market Analysis</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Tokenomics &amp; ICO Content</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Regulatory &amp; Compliance Guides</div>
+          <div class="cover-row"><span class="cr-dot">▸</span>Multilingual Crypto Translation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Dominate Crypto Search Results</h2>
+      <p>Partner with specialists who know your industry inside out.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Start Today →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}SEO Content Writing — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <div class="breadcrumb"><a href="{% url 'home' %}">Home</a><span class="breadcrumb-sep">›</span><a href="{% url 'services' %}">Services</a><span class="breadcrumb-sep">›</span>SEO Content Writing</div>
+    <h1>SEO Content <span style="color:var(--dodger)">Writing</span></h1>
+    <p>Rank higher, convert better, and build lasting authority with content crafted for both humans and search engines.</p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;">
+      <div class="reveal">
+        <span class="s-label">The Service</span>
+        <h2 class="s-title">Content That <span class="ac">Climbs the Rankings</span></h2>
+        <p class="s-desc" style="margin-bottom:1.25rem;">Without SEO-optimised content, your brand can never reach the visibility it deserves. Our writers continuously study Google's updates and apply the latest best practices to every piece — from iGaming reviews to Fintech explainers and Crypto deep-dives.</p>
+        <a href="{% url 'quote' %}" class="btn-primary" style="margin-top:2rem;display:inline-flex;">Get a Content Writing Quote →</a>
+      </div>
+      <div class="reveal check-list">
+        <div class="check-item"><span class="ck">✓</span><span>Keyword research &amp; competitor analysis</span></div>
+        <div class="check-item"><span class="ck">✓</span><span>Long-form articles &amp; blog posts</span></div>
+        <div class="check-item"><span class="ck">✓</span><span>Landing pages &amp; conversion copy</span></div>
+        <div class="check-item"><span class="ck">✓</span><span>On-page SEO optimisation</span></div>
+        <div class="check-item"><span class="ck">✓</span><span>iGaming, Fintech &amp; Crypto specialisation</span></div>
+        <div class="check-item"><span class="ck">✓</span><span>Regular performance reporting</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Ready to Get Started?</h2>
+      <p>Contact us today for a tailored quote matched to your exact requirements.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Get a Free Quote →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

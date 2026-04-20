@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Blog — SlyphyWriters{% endblock %}
+{% block meta_desc %}Insights on SEO content writing, translation, iGaming, Fintech, and Crypto from the SlyphyWriters team.{% endblock %}
+
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <span class="s-label">Insights & Expertise</span>
+    <h1>Our <span style="color:var(--dodger)">Blog</span></h1>
+    <p>Expert insights on SEO, content strategy, iGaming, Fintech, and Crypto — straight from our specialists.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <!-- Category filters -->
+    <div class="cat-filters">
+      <a href="{% url 'blog_list' %}" class="cat-btn {% if not current_category %}active{% endif %}">All Posts</a>
+      {% for cat in categories %}
+        <a href="{% url 'blog_list' %}?category={{ cat.slug }}" class="cat-btn {% if current_category.slug == cat.slug %}active{% endif %}">{{ cat.name }}</a>
+      {% endfor %}
+    </div>
+
+    <!-- Posts grid -->
+    {% if posts %}
+      <div class="blog-grid">
+        {% for post in posts %}
+        <article class="blog-card reveal">
+          {% if post.featured_image %}
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="blog-img">
+          {% else %}
+            <div class="blog-img-ph">
+              {% if post.category %}
+                {% if 'igaming' in post.category.slug %}🎰
+                {% elif 'fintech' in post.category.slug %}💳
+                {% elif 'crypto' in post.category.slug %}₿
+                {% elif 'seo' in post.category.slug %}📈
+                {% else %}✍️{% endif %}
+              {% else %}✍️{% endif %}
+            </div>
+          {% endif %}
+          <div class="blog-body">
+            {% if post.category %}
+              <a href="{% url 'blog_list' %}?category={{ post.category.slug }}" class="blog-tag">{{ post.category.name }}</a>
+            {% endif %}
+            <h2 class="blog-title">
+              <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            </h2>
+            <p class="blog-excerpt">{{ post.excerpt|truncatechars:140 }}</p>
+            <div class="blog-meta" style="display:flex;justify-content:space-between;align-items:center;">
+              <span>By {{ post.author }}</span>
+              <span>{% if post.published_at %}{{ post.published_at|date:"d M Y" }}{% else %}{{ post.created_at|date:"d M Y" }}{% endif %}</span>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div style="text-align:center;padding:6rem 2rem;color:rgba(255,255,255,0.45);">
+        <div style="font-size:3.5rem;margin-bottom:1.25rem;">✍️</div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:700;color:rgba(255,255,255,0.7);margin-bottom:0.75rem;">No posts yet</h3>
+        <p style="font-size:0.95rem;">{% if current_category %}No posts in this category yet.{% else %}Our team is working on great content. Check back soon!{% endif %}</p>
+        {% if current_category %}<a href="{% url 'blog_list' %}" class="btn-secondary" style="margin-top:1.5rem;display:inline-flex;">View All Posts</a>{% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- Newsletter CTA -->
+<section class="bg-glass">
+  <div class="container" style="text-align:center;">
+    <div class="reveal">
+      <span class="s-label">Stay Updated</span>
+      <h2 class="s-title">Never Miss an <span class="ac">Insight</span></h2>
+      <p class="s-desc" style="margin:0 auto 2rem;">Get our latest articles on SEO, iGaming content, Fintech writing, and Crypto strategy delivered straight to your inbox.</p>
+      <a href="{% url 'contact' %}" class="btn-primary">Get in Touch →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

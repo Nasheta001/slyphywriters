@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}SlyphyWriters — Converting Complex Words into Simple Content{% endblock %}</title>
+  <meta name="description" content="{% block meta_desc %}SlyphyWriters is your top-quality copywriting partner. Expert SEO content writing, translation, editing, and link building for iGaming, Fintech, and Crypto industries.{% endblock %}"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+{% block splash %}{% endblock %}
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="{% url 'home' %}" class="nav-brand">Slyphy<span>Writers</span></a>
+
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+    <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
+    <li><a href="{% url 'process' %}" class="nav-link">Process</a></li>
+
+    <li class="nav-dropdown">
+      <span class="nav-dd-toggle">Services</span>
+      <ul class="dd-menu">
+        <li><a href="{% url 'service_seo_content' %}">SEO Content Writing</a></li>
+        <li><a href="{% url 'service_seo_services' %}">SEO Services</a></li>
+        <li><a href="{% url 'service_translation' %}">Translation</a></li>
+        <li><a href="{% url 'service_editing' %}">Editing</a></li>
+        <li><a href="{% url 'service_link_building' %}">Link Building</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-dropdown">
+      <span class="nav-dd-toggle">Industry</span>
+      <ul class="dd-menu">
+        <li><a href="{% url 'industry_igaming' %}">iGaming</a></li>
+        <li><a href="{% url 'industry_fintech' %}">Fintech</a></li>
+        <li><a href="{% url 'industry_crypto' %}">Crypto</a></li>
+      </ul>
+    </li>
+
+    <li class="nav-dropdown">
+      <span class="nav-dd-toggle">Blog</span>
+      <ul class="dd-menu">
+        <li><a href="{% url 'blog_list' %}">All Posts</a></li>
+      </ul>
+    </li>
+
+    <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+    <li><a href="{% url 'quote' %}" class="nav-link nav-cta">Get a Quote</a></li>
+  </ul>
+
+  <button class="nav-ham" id="ham" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-content">
+  {% if messages %}
+  <div class="messages-wrap">
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% block content %}{% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">Slyphy<span>Writers</span></div>
+      <p class="footer-tagline">Converting complex words into simple, powerful content. Your top-quality copywriting partner for iGaming, Fintech, and Crypto.</p>
+      <div class="footer-socials">
+        <a href="#" class="soc-btn" aria-label="LinkedIn">in</a>
+        <a href="#" class="soc-btn" aria-label="Twitter">𝕏</a>
+        <a href="#" class="soc-btn" aria-label="Facebook">f</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Main</h4>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'process' %}">Process</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'blog_list' %}">Blog</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="{% url 'service_seo_content' %}">SEO Content Writing</a></li>
+        <li><a href="{% url 'service_seo_services' %}">SEO Services</a></li>
+        <li><a href="{% url 'service_translation' %}">Translation</a></li>
+        <li><a href="{% url 'service_editing' %}">Editing</a></li>
+        <li><a href="{% url 'service_link_building' %}">Link Building</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Industries</h4>
+      <ul>
+        <li><a href="{% url 'industry_igaming' %}">iGaming</a></li>
+        <li><a href="{% url 'industry_fintech' %}">Fintech</a></li>
+        <li><a href="{% url 'industry_crypto' %}">Crypto</a></li>
+        <li><a href="{% url 'quote' %}">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 SlyphyWriters. All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+  </div>
+</footer>
+
+<script src="{% static 'js/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

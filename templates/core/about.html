@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}About Us — SlyphyWriters{% endblock %}
+{% block content %}
+<div class="page-hero">
+  <div class="page-hero-inner container">
+    <span class="s-label">Who We Are</span>
+    <h1>About <span style="color:var(--dodger)">SlyphyWriters</span></h1>
+    <p>A passionate team of content specialists dedicated to making complex ideas simple, accessible, and impactful.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div class="reveal">
+        <span class="s-label">Our Story</span>
+        <h2 class="s-title">We Believe Great Content <span class="ac">Changes Everything</span></h2>
+        <p class="s-desc" style="margin-bottom:1.25rem;">At SlyphyWriters, we believe that collaboration is a two-way street. We do everything in our power to be the right partner for your business — working alongside you, with the same goal in mind: building your brand.</p>
+        <p class="s-desc">Our passion is content. Whether it's a comprehensive SEO strategy, a multilingual translation project, or expert link building — we make sure this critical aspect of your business is covered and you're on the right path to success.</p>
+      </div>
+      <div class="reveal" style="background:rgba(0,35,102,0.28);border:1px solid rgba(115,194,251,0.22);border-radius:24px;padding:3rem;backdrop-filter:blur(10px);">
+        <span class="s-label">Our Mission</span>
+        <p style="font-family:'Syne',sans-serif;font-size:1.45rem;font-weight:700;line-height:1.45;color:#fff;">To enable clients to reach their business goals through exceptional content while keeping a human, dedicated connection that ensures the best quality at every step.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="bg-glass">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="s-label">What Defines Us</span>
+      <h2 class="s-title">Our <span class="ac">Values</span></h2>
+      <p class="s-desc" style="margin:0 auto;">These principles guide every project, every client relationship, every piece of content we produce.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card reveal"><div class="card-icon">🏆</div><div class="card-title">First-Class Quality</div><p class="card-desc">Our professional content creators are committed to exceeding expectations on every single project. Quality is non-negotiable.</p></div>
+      <div class="card reveal"><div class="card-icon">🤝</div><div class="card-title">Collaborative Connection</div><p class="card-desc">Through transparent communication, we build reliable partnerships that last. Clear dialogue keeps us aligned with your needs at all times.</p></div>
+      <div class="card reveal"><div class="card-icon">⚡</div><div class="card-title">Responsiveness</div><p class="card-desc">The internet doesn't stand still, and neither do we. We adapt to changes and respond before the competition even notices the shift.</p></div>
+      <div class="card reveal"><div class="card-icon">⏰</div><div class="card-title">Time Management</div><p class="card-desc">Whether the pressure is on or not, SlyphyWriters will deliver on time. No delays, no cancellations — just professional, punctual delivery.</p></div>
+      <div class="card reveal"><div class="card-icon">⚖️</div><div class="card-title">Authentic Equality</div><p class="card-desc">We believe in treating everyone with fairness and respect. Equal opportunity and ethical collaboration are at the core of everything we do.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section>
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <span class="s-label">The People Behind the Words</span>
+      <h2 class="s-title">Meet the <span class="ac">Team</span></h2>
+    </div>
+    <div class="team-grid">
+      {% for member in team %}
+      <div class="team-card reveal">
+        <div class="team-avatar">{{ member.icon }}</div>
+        <div class="team-name">{{ member.name }}</div>
+        <div class="team-role">{{ member.role }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Ready to Work Together?</h2>
+      <p>Let's build something great. Get your personalised quote today.</p>
+      <a href="{% url 'quote' %}" class="btn-primary">Get a Quote →</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
